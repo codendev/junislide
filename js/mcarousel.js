@@ -35,9 +35,9 @@
 			this.pages = Math.ceil(this.itemCount / this.settings.show);
 
 			this.ulWidth = this.pages * this.settings.show
-					* this.settings.image_size;
+					* this.settings.image_width;
 
-			// alert(this.settings.image_size);
+			// alert(this.settings.image_width);
 
 			this.listContainer.css({
 				width : this.ulWidth
@@ -49,7 +49,7 @@
 			ins = this;
 			this.items.each(function(obj) {
 				$(this).css({
-					width : ins.settings.image_size,
+					width : ins.settings.image_width,
 					marginRight : ins.settings.image_space
 				});
 			});
@@ -86,7 +86,7 @@
 								{
 									marginLeft : -(this.currentPage
 											* this.settings.show
-											* this.settings.image_size + this.settings.image_space
+											* this.settings.image_width + this.settings.image_space
 											* this.currentPage
 											* this.settings.show)
 								}, "slow");
@@ -109,7 +109,7 @@
 								{
 									marginLeft : -(this.currentPage
 											* this.settings.show
-											* this.settings.image_size + this.settings.image_space
+											* this.settings.image_width + this.settings.image_space
 											* this.currentPage
 											* this.settings.show)
 								}, "slow");
@@ -126,7 +126,7 @@
 	$.fn.mcarousel = function(options) {
 
 		var settings = $.extend({
-			'image_size' : 135,
+			'image_width' : 135,
 			'show' : 3,
 			'image_space' : 3
 		}, options);
