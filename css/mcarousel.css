@@ -9,7 +9,7 @@ padding:0px;
   border-radius: 10px 10px 10px 10px;	 
   padding: 10px 30px;
   position:relative;
-  width:413px;
+  width:735px;
  
  
 }
@@ -44,12 +44,17 @@ padding:0px;
 .mcarousel span{
 	position:absolute;
 	top:50%;
-	padding:5px;
+	padding:7px;
+	
+}
+.mcarousel span:hover{
+	cursor:pointer;
+	
 }
 .mcarousel span.right {
 	
  	right:12px;
-	background: url('../images/right.jpeg') no-repeat scroll left top transparent;
+	background: url('../images/right.png') no-repeat scroll left top transparent;
 	
 
 }
@@ -58,7 +63,7 @@ padding:0px;
 	
  	position:absolute;
 	left:12px;
-	background: url('../images/left.jpeg') no-repeat scroll left top transparent;
+	background: url('../images/left.png') no-repeat scroll left top transparent;
 	
 
 }

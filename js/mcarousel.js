@@ -5,120 +5,133 @@
  * Released under the GPL3 license
  *
  */
-(function( $ ) {
- 
-  
+(function($) {
+
 	var methods = {
-	
-	init : function( obj,settings ) { 
-	
-	this.mc=obj;
-	
-	this.settings=settings;
 
-	this.currentPage=0;
+		init : function(obj, settings) {
 
-	this.listContainer=obj.find('ul');
+			this.mc = obj;
 
-	this.items=this.listContainer.children('li');
+			this.settings = settings;
 
-	this.itemCount= this.items.length;
+			this.currentPage = 0;
 
-	this.initList();
+			this.listContainer = obj.find('ul');
 
-	this.doMath();	
+			this.items = this.listContainer.children('li');
 
-	this.addControls();
-	
-		 
-	},
-	doMath: function( ){
-	
-		this.pages=Math.ceil(this.itemCount/this.settings.show);
+			this.itemCount = this.items.length;
 
-		this.ulWidth=this.pages * this.settings.show * this.settings.image_size;
-		
-		//alert(this.settings.image_size);
-			
-		this.listContainer.css({width:this.ulWidth});
- 		
+			this.initList();
 
-	},
-	initList : function( ) {
-	
-	ins=this;
-	this.items.each(function(obj)
-			{	
-				$(this).css({width:ins.settings.image_size,marginRight:ins.settings.image_space});
-			});	
-	},	
-	
-	addControls : function( ) {
-	  
-          ins=this; 		
-	  this.navLeft=$("<span class='left'></span>");		
-	  this.navRight=$("<span class='right'></span>");
-	  this.mc.append( this.navLeft );
-	  this.mc.append( this.navRight );
-		  
-	  this.navLeft.hide();
+			this.doMath();
 
-	  this.navLeft.bind('click.mcarousel', function() {
-		  ins.slideLeft();
-		});
-	  this.navRight.bind('click.mcarousel', function() {
-		  ins.slideRight();
-		});		
-			
-	},
-	slideLeft: function(){
-		
-		if(this.currentPage==0){
+			this.addControls();
+
+		},
+		doMath : function() {
+
+			this.pages = Math.ceil(this.itemCount / this.settings.show);
+
+			this.ulWidth = this.pages * this.settings.show
+					* this.settings.image_size;
+
+			// alert(this.settings.image_size);
+
+			this.listContainer.css({
+				width : this.ulWidth
+			});
+
+		},
+		initList : function() {
+
+			ins = this;
+			this.items.each(function(obj) {
+				$(this).css({
+					width : ins.settings.image_size,
+					marginRight : ins.settings.image_space
+				});
+			});
+		},
+
+		addControls : function() {
+
+			ins = this;
+			this.navLeft = $("<span class='left'></span>");
+			this.navRight = $("<span class='right'></span>");
+			this.mc.append(this.navLeft);
+			this.mc.append(this.navRight);
 
 			this.navLeft.hide();
-		}else{
-			this.navRight.show();
-			this.currentPage--;
-			this.listContainer.animate({marginLeft:-(this.currentPage* this.settings.show * this.settings.image_size + this.settings.image_space*this.currentPage*this.settings.show)},"slow");		
-			if(this.currentPage==0){
+
+			this.navLeft.bind('click.mcarousel', function() {
+				ins.slideLeft();
+			});
+			this.navRight.bind('click.mcarousel', function() {
+				ins.slideRight();
+			});
+
+		},
+		slideLeft : function() {
+
+			if (this.currentPage == 0) {
 
 				this.navLeft.hide();
-			}	
-		}
-	},
-	slideRight: function(){
-		
-		if(this.currentPage==this.pages-1){
+			} else {
+				this.navRight.show();
+				this.currentPage--;
+				this.listContainer
+						.animate(
+								{
+									marginLeft : -(this.currentPage
+											* this.settings.show
+											* this.settings.image_size + this.settings.image_space
+											* this.currentPage
+											* this.settings.show)
+								}, "slow");
+				if (this.currentPage == 0) {
 
-			this.navRight.hide();
-		}
-		else{
-			 this.navLeft.show();
-			this.currentPage++;	
-			this.listContainer.animate({marginLeft: -(this.currentPage* this.settings.show * this.settings.image_size + this.settings.image_space*this.currentPage*this.settings.show)},"slow");
-			
-			if(this.currentPage==this.pages-1){
-				this.navRight.hide();
+					this.navLeft.hide();
+				}
 			}
-				
-		}		
+		},
+		slideRight : function() {
 
-	}
-	};	
+			if (this.currentPage == this.pages - 1) {
 
+				this.navRight.hide();
+			} else {
+				this.navLeft.show();
+				this.currentPage++;
+				this.listContainer
+						.animate(
+								{
+									marginLeft : -(this.currentPage
+											* this.settings.show
+											* this.settings.image_size + this.settings.image_space
+											* this.currentPage
+											* this.settings.show)
+								}, "slow");
 
-  $.fn.mcarousel = function(options) {
-  	
-	var settings = $.extend( {
-		'image_size': 135,
-		'show' : 3,
-		'image_space':3
-	}, options);
+				if (this.currentPage == this.pages - 1) {
+					this.navRight.hide();
+				}
 
-	
-    	methods.init(this,settings);
-	
+			}
 
-  };
-})( jQuery );
+		}
+	};
 
+	$.fn.mcarousel = function(options) {
+
+		var settings = $.extend({
+			'image_size' : 135,
+			'show' : 3,
+			'image_space' : 3
+		}, options);
+
+		methods.init(this, settings);
+
+	};
+})(jQuery);
