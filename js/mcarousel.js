@@ -120,11 +120,10 @@
 								* this.settings.show)
 					}, "slow");
 			
-			//alert(this.currentPage);
 			
 			this.currentPage=page;
 			
-			//alert(this.currentPage);
+			
 			this.navLeft.show();
 			this.navRight.show();
 			if (this.currentPage == 0) {
@@ -190,7 +189,7 @@
 		}
 	};
 
-	$.fn.mcarousel = function(options) {
+	$.fn.mCarousel = function(options) {
 
 		var settings = $.extend({
 			'image_width' : 135,
