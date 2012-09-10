@@ -1,15 +1,13 @@
-
-*{
-margin:0px;
-padding:0px;
-}
-
 .mcarousel{
   background: none repeat scroll 0 0 #101010;
   border-radius: 10px 10px 10px 10px;	 
-  padding: 10px 30px;
+  padding: 25px 30px;
   position:relative;
-  width:735px;
+  
+}
+.mcarousel *{
+  margin:0px;
+  padding:0px;
  
  
 }
@@ -69,5 +67,29 @@ padding:0px;
 
 }
 
+.mcarousel ul.pager{
+	
+	position:absolute;
+	bottom:0px;
+	left:50%;
+	list-style: none outside none;	
+	
+}
 
+.mcarousel ul.pager li{
+    display: block;
+    float: left;
+    font-size: 50px;
+    color: #fff;   
+}
+.mcarousel ul.pager li:hover{
+	cursor:pointer;
+	
+	
+}
 
+.mcarousel ul.pager li.active{
+	
+	color:#568764;
+	
+}

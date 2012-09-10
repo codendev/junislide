@@ -28,6 +28,18 @@
 			this.doMath();
 
 			this.addControls();
+			
+			if(this.settings.pager){
+				
+				this.addPager();
+				
+			}
+			if(this.settings.type=='fixed'){
+				
+				this.mc.css({ width:this.settings.show*this.settings.image_width});
+				
+			}
+			
 
 		},
 		doMath : function() {
@@ -44,6 +56,29 @@
 			});
 
 		},
+		addPager : function() {
+
+			ins = this;
+			
+			this.pager = $("<ul class='pager'></ul>");
+			
+			for(var i=0;i<this.pages;i++){
+				
+				item=$("<li index="+i+">.</li>");
+				
+				this.pager.append(item);
+				
+			}
+			this.pager.children('li').bind('click.mcarousel', function() {
+				
+				value=$(this).attr('index');
+				
+				ins.goPage(value);
+			});
+			
+			this.mc.append(this.pager);
+		},
+		
 		initList : function() {
 
 			ins = this;
@@ -73,6 +108,37 @@
 			});
 
 		},
+		goPage : function(page) {
+			
+			this.listContainer
+			.animate(
+					{
+						marginLeft : -(page
+								* this.settings.show
+								* this.settings.image_width + this.settings.image_space
+								* page
+								* this.settings.show)
+					}, "slow");
+			
+			//alert(this.currentPage);
+			
+			this.currentPage=page;
+			
+			//alert(this.currentPage);
+			this.navLeft.show();
+			this.navRight.show();
+			if (this.currentPage == 0) {
+
+				this.navLeft.hide();
+			}
+			if (this.currentPage == this.pages - 1) {
+
+				this.navRight.hide();
+			}
+			
+			
+		},
+		
 		slideLeft : function() {
 
 			if (this.currentPage == 0) {
@@ -104,6 +170,7 @@
 			} else {
 				this.navLeft.show();
 				this.currentPage++;
+				
 				this.listContainer
 						.animate(
 								{
@@ -128,7 +195,9 @@
 		var settings = $.extend({
 			'image_width' : 135,
 			'show' : 3,
-			'image_space' : 3
+			'image_space' : 3,
+			'pager':true,
+			'type':'fixed'
 		}, options);
 
 		methods.init(this, settings);

@@ -1,0 +1,20 @@
+*{
+margin:0px 25px;
+padding:0px;
+}
+
+body{
+font-family:sans-serif;
+font-weight: 12px;
+}
+
+h1{
+	font-weight: 16px;
+	padding: 10px 0px;
+}
+
+h2{
+	font-weight: 14px;
+	padding:5px 0px;
+}
+
