@@ -28,6 +28,5 @@ Features
 ----------
     * Supports right to left languages like Arabic and Persian.
     * Supports left to right languages like English and Spanish.
-    * Elegant jQuery carousel.
     * Supports fixed width box carousel.
     * Can enable or disable pager.
