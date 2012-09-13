@@ -1,55 +1,68 @@
-<html dir="rtl">
+<html dir="ltr">
 <head>
-<title>
-mCarousel jQuery carousel plugin.
-</title>
+<title>mCarousel jQuery carousel plugin.</title>
 <link rel="stylesheet" href="css/demo.css" type="text/css" />
 <link rel="stylesheet" href="css/mcarousel.css" type="text/css" />
-<script src="js/jquery-1.8.1.js" ></script>
-<script src="js/mcarousel.js" ></script>
+<script src="js/jquery-1.8.1.js"></script>
+<script src="js/mcarousel.js"></script>
 
 
 </head>
 
 <body>
-<h1>mCarousel</h1>
-<p>
-mCarousel jQuery carousel plugin.
-</p>
+	<h1>mCarousel</h1>
+	<p>mCarousel jQuery carousel plugin.</p>
 
-<h2>Demo</h2>
+	<h2>Features</h2>
+	<ul>
+		<li>Supports right to left languages like Arabic and Persian.</li>
+		<li>Supports left to right languages like English and Spanish.</li>
+		<li>Support elastic carousel. </li>
+		<li>Supports fixed width box carousel. </li>
+	    <li>Can enable/disable pager. </li>
+	    </ul>
+
+
+
+			<h2>Demo</h2>
 	
 	<div class="mcarousel">
 		<div class="mcontainer">
-			<ul >
-				<li >
-					<a href="#"><img src="images/image0.png"/></a>		
+			<ul>
+				<li>
+					<a href="#"><img src="images/image0.png" /></a>		
 				</li>
-			  	<li >
-					<a href="#"><img src="images/image1.png"/></a>		
+			  	<li>
+					<a href="#"><img src="images/image1.png" /></a>		
 				</li>
-				<li >
-					<a href="#"><img src="images/image2.png"/></a>		
+				<li>
+					<a href="#"><img src="images/image2.png" /></a>		
 				</li>
-				<li >
-					<a href="#"><img src="images/image3.png"/></a>		
+				<li>
+					<a href="#"><img src="images/image3.png" /></a>		
 				</li>
-				<li >
-					<a href="#"><img src="images/image4.png"/></a>		
+				<li>
+					<a href="#"><img src="images/image4.png" /></a>		
 				</li>
-				<li >
-					<a href="#"><img src="images/image5.png"/></a>		
+				<li>
+					<a href="#"><img src="images/image5.png" /></a>		
 				</li>
-			  	<li >
-					<a href="#"><img src="images/image6.png"/></a>		
+			  	<li>
+					<a href="#"><img src="images/image6.png" /></a>		
 				</li>
 				
 			</ul>			
 			
 		</div>
 	</div>
-	
-<pre>	
+
+<h2>HOW TO</h2>	
+<p>Include the libraries and invoke the method.</p>
+<pre>
+&lt;script src=&quot;js/jquery-1.8.1.js&quot; &gt;&lt;/script&gt;
+&lt;script src=&quot;js/mcarousel.js&quot; &gt;&lt;/script&gt;
+
+
 $(".mcarousel").mCarousel(
  { 
    'image_width':245,
@@ -60,24 +73,156 @@ $(".mcarousel").mCarousel(
  }
 );
 	
-	</pre>	
+</pre>	
+	
+<h2>CSS</h2>
+<pre>
+.mcarousel{
+  background: none repeat scroll 0 0 #101010;
+  border-radius: 10px 10px 10px 10px;	 
+  padding: 25px 30px;
+  position:relative;
+  
+}
+.mcarousel *{
+  margin:0px;
+  padding:0px;
+ 
+ 
+}
+.mcarousel .mcontainer {
+    background: none repeat scroll 0 0 #000000;
+    overflow: hidden;
+    	
+}
+
+.mcontainer ul ol {
+	
+	list-style: none outside none;
+}
+
+.mcontainer ul li {
+    display: block;
+   
+}
+
+.mcontainer ul li a{
+
+    display: block;
+
+}
+.mcontainer ul:after{
+	
+	clear:both;
+}
+
+.mcontainer ul li a img{
+    border: medium none;		
+    display: block;
+    max-height: 100%;
+    max-width: 100%;
+}
+.mcarousel span{
+	position:absolute;
+	top:50%;
+	padding:7px;
+	margin-top: -5px;
+	
+}
+.mcarousel span:hover{
+	cursor:pointer;
+	
+}
+.mcarousel span.right {
+	
+ 	right:12px;
+	background: url('../images/right.png') no-repeat scroll left top transparent;
+	
+
+}
+
+.mcarousel span.left {
+	
+ 	position:absolute;
+	left:12px;
+	background: url('../images/left.png') no-repeat scroll left top transparent;
+	
+
+}
+
+.mcarousel ul.pager{
+	
+	position:absolute;
+	bottom:0px;
+	left:50%;
+	list-style: none outside none;	
+	
+}
+
+.mcarousel ul.pager li{
+    display: block;
+     font-size: 50px;
+    color: #fff;   
+}
+.mcarousel ul.pager li:hover{
+	cursor:pointer;
+	
+	
+}
+
+.mcarousel ul.pager li.active{
+	
+	color:#568764;
+	
+}
+</pre>	
+
+<h2>HTML</h2>
+<pre>
+&lt;div class=&quot;mcarousel&quot;&gt;
+	&lt;div class=&quot;mcontainer&quot;&gt;
+		&lt;ul &gt;
+			&lt;li &gt;
+				&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;images/image0.png&quot;/&gt;&lt;/a&gt;		
+			&lt;/li&gt;
+		  	&lt;li &gt;
+				&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;images/image1.png&quot;/&gt;&lt;/a&gt;		
+			&lt;/li&gt;
+			&lt;li &gt;
+				&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;images/image2.png&quot;/&gt;&lt;/a&gt;		
+			&lt;/li&gt;
+			&lt;li &gt;
+				&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;images/image3.png&quot;/&gt;&lt;/a&gt;		
+			&lt;/li&gt;
+			&lt;li &gt;
+				&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;images/image4.png&quot;/&gt;&lt;/a&gt;		
+			&lt;/li&gt;
+			&lt;li &gt;
+				&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;images/image5.png&quot;/&gt;&lt;/a&gt;		
+			&lt;/li&gt;
+		  	&lt;li &gt;
+				&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;images/image6.png&quot;/&gt;&lt;/a&gt;		
+			&lt;/li&gt;
+			
+		&lt;/ul&gt;			
+		
+	&lt;/div&gt;
+&lt;/div&gt;
+</pre>
 	
 <script>
+	$(".mcarousel").mCarousel({
+		'image_width' : 245,
+		'show' : 4,
+		'image_space' : 3,
+		'pager' : true,
+		'type' : 'elastic',
 
-$(".mcarousel").mCarousel(
-							 { 
-							   'image_width':245,
-							   'show':4,
-							   'image_space' : 3,
-							   'pager':true,
-							   'type':'fixed',
-							   
-							 }
-						 );
-
+	});
 </script>
 
 
-</body>
+
+		</body>
 
 </html>

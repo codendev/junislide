@@ -32,6 +32,10 @@
     display: block;
 
 }
+.mcontainer ul:after{
+	
+	clear:both;
+}
 
 .mcontainer ul li a img{
     border: medium none;		
