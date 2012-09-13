@@ -24,7 +24,7 @@
 
 .mcontainer ul li {
     display: block;
-    float: left;   
+   
 }
 
 .mcontainer ul li a{
@@ -78,8 +78,7 @@
 
 .mcarousel ul.pager li{
     display: block;
-    float: left;
-    font-size: 50px;
+     font-size: 50px;
     color: #fff;   
 }
 .mcarousel ul.pager li:hover{
