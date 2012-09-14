@@ -29,3 +29,7 @@ pre {
     padding: 1em 0;
     white-space: pre;
 }
+ul.features li {
+	margin:0px 15px;
+	
+}
