@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html dir="ltr">
 <head>
 <title>mCarousel jQuery carousel plugin.</title>
@@ -15,16 +16,13 @@
 
 	<h2>Features</h2>
 	<ul>
-		<li>Supports right to left languages like Arabic and Persian.</li>
-		<li>Supports left to right languages like English and Spanish.</li>
+		<li>Supports <a href="rtl.html">right to left</a> languages like Arabic and Persian.</li>
+		<li>Supports <a href="index.html">left to right</a> languages like English and Spanish.</li>
 		<li>Supports elastic carousel. </li>
 		<li>Supports fixed width box carousel. </li>
 	    <li>Can enable/disable pager. </li>
 	    </ul>
-
-
-
-			<h2>Demo</h2>
+		<h2>Left to Right Demo</h2>
 	
 	<div class="mcarousel">
 		<div class="mcontainer">
@@ -82,6 +80,7 @@ $(".mcarousel").mCarousel(
   border-radius: 10px 10px 10px 10px;	 
   padding: 25px 30px;
   position:relative;
+   overflow: hidden;
   
 }
 .mcarousel *{
@@ -155,14 +154,18 @@ $(".mcarousel").mCarousel(
 	position:absolute;
 	bottom:0px;
 	left:50%;
-	list-style: none outside none;	
+	list-style: none outside none;
+	
+
 	
 }
 
 .mcarousel ul.pager li{
     display: block;
      font-size: 50px;
-    color: #fff;   
+     color: #fff;
+     float:left;
+        
 }
 .mcarousel ul.pager li:hover{
 	cursor:pointer;
@@ -216,7 +219,7 @@ $(".mcarousel").mCarousel(
 		'show' : 4,
 		'image_space' : 3,
 		'pager' : true,
-		'type' : 'elastic',
+		'type' : 'elastic'
 
 	});
 </script>

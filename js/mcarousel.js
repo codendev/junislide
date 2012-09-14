@@ -343,7 +343,7 @@
 			'show' : 3, // Show the number of images
 			'image_space' : 3,
 			'pager' : true, // Enable disable pager
-			'type' : 'fixed', // Choose the type of carousel fixed/elastic
+			'type' : 'fixed' // Choose the type of carousel fixed/elastic
 
 		}, options);
 
