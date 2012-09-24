@@ -56,6 +56,12 @@
 				this._createPager();
 
 			}
+			var ins= this;
+			this.$mc.touchwipe({
+			     wipeLeft: function() { ins._slideLeft(); },
+			     wipeRight: function() { ins._slideRight();; }
+			   
+			});
 
 		},
 		_elasticMath : function() {
@@ -113,6 +119,8 @@
 				}
 
 				ins._toggleNav();
+				
+				ins._setPage(0); //Back to page 0
 
 			});
 		},
