@@ -1,4 +1,4 @@
-/* mCarousel 
+/* meSlide 
  * http://codendev.com/
  *
  * Copyright 2012 CodenDev 
@@ -106,7 +106,7 @@
 
 			var ins = this;
 
-			$(window).bind('resize.mCarousel', function(event) {
+			$(window).bind('resize.meSlide', function(event) {
 
 				ins._elasticMath();
 
@@ -160,7 +160,7 @@
 				this.pager.append(item);
 
 			}
-			this.pager.children('li').bind('click.mcarousel', function() {
+			this.pager.children('li').bind('click.meSlide', function() {
 
 				value = $(this).attr('index');
 
@@ -205,10 +205,10 @@
 
 			this._toggleNav();
 
-			this.$navLeft.bind('click.mCarousel', function() {
+			this.$navLeft.bind('click.meSlide', function() {
 				ins._slideLeft();
 			});
-			this.$navRight.bind('click.mCarousel', function() {
+			this.$navRight.bind('click.meSlide', function() {
 				ins._slideRight();
 			});
 
@@ -348,7 +348,7 @@
 		}
 	};
 
-	$.fn.mCarousel = function(options) {
+	$.fn.meSlide = function(options) {
 
 		{
 			var settings = $.extend({

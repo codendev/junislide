@@ -2,19 +2,19 @@
 <html dir="rtl">
 <head>
 <link rel="stylesheet" href="css/demo.css" type="text/css" />
-<link rel="stylesheet" href="css/mcarousel.css" type="text/css" />
+<link rel="stylesheet" href="css/meslide.css" type="text/css" />
 <script src="js/jquery-1.8.1.js"></script>
 <script src="js/jquery.touchwipe.1.1.1.js"></script>
-<script src="js/mcarousel.js"></script>
+<script src="js/meslide.js"></script>
 <title>jQuery carousel plugin for Arabic and Persian.</title>
-<meta name="description" content=" mCarousel jQuery carousel plugin for creating carousel and sliders.Supports right to languages like Arabic and Persian.Supports elastic carousel.Supports fixed width box carousel. Ability to enable/disable pager." />
+<meta name="description" content=" meSlide jQuery carousel plugin for creating carousel and sliders.Supports right to languages like Arabic and Persian.Supports elastic carousel.Supports fixed width box carousel. Ability to enable/disable pager." />
 <meta name="keywords" content="jQuery Carousel for Arabic,free jQuery Carousel for Persian,jQuery slider for Arabic,free jQuery slider for Persian,  jQuery Carousel for Left to Right Direction, , jQuery Carousel with Pager, jQuery Carousel Elastic Slider, open source jQuery Carousel, javascript slider,javascript slider for Arabic,javascript slider for Persian,javascript elastic slider,javascript slider for Arabic,javscript carousel,ipad compatible slider,android compatible slider" />
 </head>
 
 <body>
-	<h1 style="direction:ltr">mCarousel</h1>
-	<p style="direction:ltr">mCarousel jQuery carousel plugin.</p>
-	<a style="direction:ltr" href="https://github.com/codendev/mCarousel/archive/master.zip">Download</a>
+	<h1 style="direction:ltr">meSlide</h1>
+	<p style="direction:ltr">meSlide jQuery carousel plugin.</p>
+	<a style="direction:ltr" href="https://github.com/codendev/meSlide/archive/master.zip">Download</a>
 
 	<h2 style="direction:ltr">Features</h2>
 	<ul style="direction:ltr">
@@ -28,9 +28,9 @@
 		<li>Supports fixed width box carousel.</li>
 		<li>Can enable/disable pager.</li>
 	</ul>
-	<h2>Elastic</h2>
+	<h2 style="direction:ltr" >Elastic</h2>
 
-	<div id="elastic" class="mcarousel">
+	<div id="elastic" class="meslide">
 		<div class="mcontainer">
 			<ul>
 				<li><a href="#"><img src="images/image0.png" /></a></li>
@@ -46,15 +46,15 @@
 		</div>
 	</div>
 
-	<h2 style="direction:ltr">HOW TO MAKE AN ELASTIC CAROUSEL</h2>
+	<h2 style="direction:ltr">HOW TO MAKE AN ELASTIC SLIDER</h2>
 	<p style="direction:ltr">Include the libraries and invoke the method.</p>
 	<pre style="direction:ltr">
 &lt;script src=&quot;js/jquery-1.8.1.js&quot; &gt;&lt;/script&gt;
 &lt;script src=&quot;js/jquery.touchwipe.1.1.1.js&quot; &gt;&lt;/script&gt;
-&lt;script src=&quot;js/mcarousel.js&quot; &gt;&lt;/script&gt;
+&lt;script src=&quot;js/meslide.js&quot; &gt;&lt;/script&gt;
 
 
-$(".mcarousel").mCarousel(
+$(".meslide").meSlide(
  { 
    'image_width':245,
    'show':4,
@@ -65,8 +65,8 @@ $(".mcarousel").mCarousel(
 );
 	
 </pre>
-	<H2>Fixed Carousel</H2>
-	<div id="fixed" class="mcarousel">
+	<H2 style="direction:ltr">Fixed Carousel</H2>
+	<div id="fixed" class="meslide">
 		<div class="mcontainer">
 			<ul>
 				<li><a href="#"><img src="images/image0.png" /></a></li>
@@ -81,16 +81,16 @@ $(".mcarousel").mCarousel(
 
 		</div>
 	</div>
-	<h2 style="direction:ltr">HOW TO MAKE AN FIXED CAROUSEL</h2>
+	<h2 style="direction:ltr">HOW TO MAKE AN FIXED SLIDER</h2>
 	<p style="direction:ltr">Include the libraries and invoke the method.</p>
 	<pre style="direction:ltr">
 &lt;script src=&quot;js/jquery-1.8.1.js&quot; &gt;&lt;/script&gt;
 &lt;script src=&quot;js/jquery.touchwipe.1.1.1.js&quot; &gt;&lt;/script&gt;
-&lt;script src=&quot;js/mcarousel.js&quot; &gt;&lt;/script&gt;
+&lt;script src=&quot;js/meslide.js&quot; &gt;&lt;/script&gt;
 
 
 
-$(".mcarousel").mCarousel(
+$(".meslide").meSlide(
  { 
    'image_width':245,
    'show':4,
@@ -102,9 +102,9 @@ $(".mcarousel").mCarousel(
 	
 </pre>
 
-	<h2>CSS</h2>
-	<pre>
-.mcarousel{
+	<h2 style="direction:ltr" >CSS</h2>
+	<pre style="direction:ltr">
+.meslide{
   background: none repeat scroll 0 0 #101010;
   border-radius: 10px 10px 10px 10px;	 
   padding: 25px 30px;
@@ -112,13 +112,13 @@ $(".mcarousel").mCarousel(
    overflow: hidden;
   
 }
-.mcarousel *{
+.meslide *{
   margin:0px;
   padding:0px;
  
  
 }
-.mcarousel .mcontainer {
+.meslide .mcontainer {
     background: none repeat scroll 0 0 #000000;
     overflow: hidden;
     	
@@ -150,18 +150,18 @@ $(".mcarousel").mCarousel(
     max-height: 100%;
     max-width: 100%;
 }
-.mcarousel span{
+.meslide span{
 	position:absolute;
 	top:50%;
 	padding:7px;
 	margin-top: -5px;
 	
 }
-.mcarousel span:hover{
+.meslide span:hover{
 	cursor:pointer;
 	
 }
-.mcarousel span.right {
+.meslide span.right {
 	
  	right:12px;
 	background: url('../images/right.png') no-repeat scroll left top transparent;
@@ -169,7 +169,7 @@ $(".mcarousel").mCarousel(
 
 }
 
-.mcarousel span.left {
+.meslide span.left {
 	
  	position:absolute;
 	left:12px;
@@ -178,7 +178,7 @@ $(".mcarousel").mCarousel(
 
 }
 
-.mcarousel ul.pager{
+.meslide ul.pager{
 	
 	position:absolute;
 	bottom:0px;
@@ -189,20 +189,20 @@ $(".mcarousel").mCarousel(
 	
 }
 
-.mcarousel ul.pager li{
+.meslide ul.pager li{
     display: block;
      font-size: 50px;
      color: #fff;
      float:left;
         
 }
-.mcarousel ul.pager li:hover{
+.meslide ul.pager li:hover{
 	cursor:pointer;
 	
 	
 }
 
-.mcarousel ul.pager li.active{
+.meslide ul.pager li.active{
 	
 	color:#568764;
 	
@@ -211,7 +211,7 @@ $(".mcarousel").mCarousel(
 
 	<h2 style="direction:ltr">HTML</h2>
 	<pre style="direction:ltr">
-&lt;div class=&quot;mcarousel&quot;&gt;
+&lt;div class=&quot;meslide&quot;&gt;
 	&lt;div class=&quot;mcontainer&quot;&gt;
 		&lt;ul &gt;
 			&lt;li &gt;
@@ -243,7 +243,7 @@ $(".mcarousel").mCarousel(
 </pre>
 
 	<script>
-		$("#elastic").mCarousel({
+		$("#elastic").meSlide({
 			'image_width' : 245,
 			'show' : 4,
 			'image_space' : 3,
@@ -254,7 +254,7 @@ $(".mcarousel").mCarousel(
 	</script>
 	
 	<script>
-		$("#fixed").mCarousel({
+		$("#fixed").meSlide({
 			'image_width' : 245,
 			'show' : 4,
 			'image_space' : 3,

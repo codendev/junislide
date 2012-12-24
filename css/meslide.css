@@ -1,4 +1,4 @@
-.mcarousel{
+.meslide{
   background: none repeat scroll 0 0 #101010;
   border-radius: 10px 10px 10px 10px;	 
   padding: 25px 30px;
@@ -6,13 +6,13 @@
    overflow: hidden;
   
 }
-.mcarousel *{
+.meslide *{
   margin:0px;
   padding:0px;
  
  
 }
-.mcarousel .mcontainer {
+.meslide .mcontainer {
     background: none repeat scroll 0 0 #000000;
     overflow: hidden;
     	
@@ -44,18 +44,18 @@
     max-height: 100%;
     max-width: 100%;
 }
-.mcarousel span{
+.meslide span{
 	position:absolute;
 	top:50%;
 	padding:7px;
 	margin-top: -5px;
 	
 }
-.mcarousel span:hover{
+.meslide span:hover{
 	cursor:pointer;
 	
 }
-.mcarousel span.right {
+.meslide span.right {
 	
  	right:12px;
 	background: url('../images/right.png') no-repeat scroll left top transparent;
@@ -63,7 +63,7 @@
 
 }
 
-.mcarousel span.left {
+.meslide span.left {
 	
  	position:absolute;
 	left:12px;
@@ -72,7 +72,7 @@
 
 }
 
-.mcarousel ul.pager{
+.meslide ul.pager{
 	
 	position:absolute;
 	bottom:0px;
@@ -83,20 +83,20 @@
 	
 }
 
-.mcarousel ul.pager li{
+.meslide ul.pager li{
     display: block;
      font-size: 50px;
      color: #fff;
      float:left;
         
 }
-.mcarousel ul.pager li:hover{
+.meslide ul.pager li:hover{
 	cursor:pointer;
 	
 	
 }
 
-.mcarousel ul.pager li.active{
+.meslide ul.pager li.active{
 	
 	color:#568764;
 	
