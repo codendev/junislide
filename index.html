@@ -2,20 +2,20 @@
 <html dir="ltr">
 <head>
 <link rel="stylesheet" href="css/demo.css" type="text/css" />
-<link rel="stylesheet" href="css/meslide.css" type="text/css" />
+<link rel="stylesheet" href="css/junislide.css" type="text/css" />
 <script src="js/jquery-1.8.1.js"></script>
 <script src="js/jquery.touchwipe.1.1.1.js"></script>
-<script src="js/meslide.js"></script>
-<title>jQuery carousel plugin for English and Spanish.</title>
-<meta name="description" content=" meSlide jQuery carousel plugin for creating carousel and sliders.Supports left to right direction languages like English and Spanish.Supports elastic carousel.Supports fixed width box carousel. Ability to enable/disable pager." />
-<meta name="keywords" content="jQuery Carousel for English,free jQuery Carousel for Spanish,jQuery slider for English,free jQuery slider for Spanish,  jQuery Carousel for Left to Right Direction, , jQuery Carousel with Pager, jQuery Carousel Elastic Slider, open source jQuery Carousel, javascript slider,javascript slider for English,javascript slider for Spanish,javascript elastic slider,javascript slider for english,javscript carousel,ipad compatible slider,android compatible slider" />
+<script src="js/junislide.js"></script>
+<title>jQuery slider plugin for English and Spanish.</title>
+<meta name="description" content=" jUnislide jQuery slider plugin for creating slider and sliders.Supports left to right direction languages like English and Spanish.Supports elastic slider.Supports fixed width box slider. Ability to enable/disable pager." />
+<meta name="keywords" content="jQuery Carousel for English,free jQuery Carousel for Spanish,jQuery slider for English,free jQuery slider for Spanish,  jQuery Carousel for Left to Right Direction, , jQuery Carousel with Pager, jQuery Carousel Elastic Slider, open source jQuery Carousel, javascript slider,javascript slider for English,javascript slider for Spanish,javascript elastic slider,javascript slider for english,javscript slider,ipad compatible slider,android compatible slider" />
 
 </head>
 
 <body>
-	<h1>meSlide</h1>
-	<p>meSlide jQuery carousel plugin.</p>
-	<a  href="https://github.com/codendev/meslide/archive/master.zip">Download</a>
+	<h1>jUnislide</h1>
+	<p>jUnislide jQuery slider plugin.</p>
+	<a  href="https://github.com/codendev/junislide/archive/master.zip">Download</a>
 	<h2>Features</h2>
 	<ul class="features">
 		<li>Supports <a href="rtl.html">right to left</a> languages like
@@ -24,13 +24,13 @@
 		<li>Supports <a href="index.html">left to right</a> languages
 			like English and Spanish.
 		</li>
-		<li>Supports elastic carousel.</li>
-		<li>Supports fixed width box carousel.</li>
+		<li>Supports elastic slider.</li>
+		<li>Supports fixed width box slider.</li>
 		<li>Can enable/disable pager.</li>
 	</ul>
 	<h2>Elastic</h2>
 
-	<div id="elastic" class="meslide">
+	<div id="elastic" class="junislide">
 		<div class="mcontainer">
 			<ul>
 				<li><a href="#"><img src="images/image0.png" /></a></li>
@@ -51,10 +51,10 @@
 	<pre>
 &lt;script src=&quot;js/jquery-1.8.1.js&quot; &gt;&lt;/script&gt;
 &lt;script src=&quot;js/jquery.touchwipe.1.1.1.js&quot; &gt;&lt;/script&gt;
-&lt;script src=&quot;js/meslide.js&quot; &gt;&lt;/script&gt;
+&lt;script src=&quot;js/junislide.js&quot; &gt;&lt;/script&gt;
 
 
-$(".meslide").meSlide(
+$(".junislide").jUnislide(
  { 
    'image_width':245,
    'show':4,
@@ -65,8 +65,8 @@ $(".meslide").meSlide(
 );
 	
 </pre>
-	<H2>Fixed Carousel</H2>
-	<div id="fixed" class="meslide">
+	<H2>Fixed</H2>
+	<div id="fixed" class="junislide">
 		<div class="mcontainer">
 			<ul>
 				<li><a href="#"><img src="images/image0.png" /></a></li>
@@ -86,10 +86,10 @@ $(".meslide").meSlide(
 	<pre>
 &lt;script src=&quot;js/jquery-1.8.1.js&quot; &gt;&lt;/script&gt;
 &lt;script src=&quot;js/jquery.touchwipe.1.1.1.js&quot; &gt;&lt;/script&gt;
-&lt;script src=&quot;js/meslide.js&quot; &gt;&lt;/script&gt;
+&lt;script src=&quot;js/junislide.js&quot; &gt;&lt;/script&gt;
 
 
-$(".meslide").meSlide(
+$(".junislide").jUnislide(
  { 
    'image_width':245,
    'show':4,
@@ -103,7 +103,7 @@ $(".meslide").meSlide(
 
 	<h2>CSS</h2>
 	<pre>
-.meslide{
+.junislide{
   background: none repeat scroll 0 0 #101010;
   border-radius: 10px 10px 10px 10px;	 
   padding: 25px 30px;
@@ -111,13 +111,13 @@ $(".meslide").meSlide(
    overflow: hidden;
   
 }
-.meslide *{
+.junislide *{
   margin:0px;
   padding:0px;
  
  
 }
-.meslide .mcontainer {
+.junislide .mcontainer {
     background: none repeat scroll 0 0 #000000;
     overflow: hidden;
     	
@@ -149,18 +149,18 @@ $(".meslide").meSlide(
     max-height: 100%;
     max-width: 100%;
 }
-.meslide span{
+.junislide span{
 	position:absolute;
 	top:50%;
 	padding:7px;
 	margin-top: -5px;
 	
 }
-.meslide span:hover{
+.junislide span:hover{
 	cursor:pointer;
 	
 }
-.meslide span.right {
+.junislide span.right {
 	
  	right:12px;
 	background: url('../images/right.png') no-repeat scroll left top transparent;
@@ -168,7 +168,7 @@ $(".meslide").meSlide(
 
 }
 
-.meslide span.left {
+.junislide span.left {
 	
  	position:absolute;
 	left:12px;
@@ -177,7 +177,7 @@ $(".meslide").meSlide(
 
 }
 
-.meslide ul.pager{
+.junislide ul.pager{
 	
 	position:absolute;
 	bottom:0px;
@@ -188,20 +188,20 @@ $(".meslide").meSlide(
 	
 }
 
-.meslide ul.pager li{
+.junislide ul.pager li{
     display: block;
      font-size: 50px;
      color: #fff;
      float:left;
         
 }
-.meslide ul.pager li:hover{
+.junislide ul.pager li:hover{
 	cursor:pointer;
 	
 	
 }
 
-.meslide ul.pager li.active{
+.junislide ul.pager li.active{
 	
 	color:#568764;
 	
@@ -210,7 +210,7 @@ $(".meslide").meSlide(
 
 	<h2>HTML</h2>
 	<pre>
-&lt;div class=&quot;meslide&quot;&gt;
+&lt;div class=&quot;junislide&quot;&gt;
 	&lt;div class=&quot;mcontainer&quot;&gt;
 		&lt;ul &gt;
 			&lt;li &gt;
@@ -242,7 +242,7 @@ $(".meslide").meSlide(
 </pre>
 
 	<script>
-		$("#elastic").meSlide({
+		$("#elastic").jUnislide({
 			'image_width' : 245,
 			'show' : 4,
 			'image_space' : 3,
@@ -253,7 +253,7 @@ $(".meslide").meSlide(
 	</script>
 	
 	<script>
-		$("#fixed").meSlide({
+		$("#fixed").jUnislide({
 			'image_width' : 245,
 			'show' : 4,
 			'image_space' : 3,

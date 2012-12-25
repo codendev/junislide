@@ -1,4 +1,4 @@
-/* meSlide 
+/* jUnislide 
  * http://codendev.com/
  *
  * Copyright 2012 CodenDev 
@@ -106,7 +106,7 @@
 
 			var ins = this;
 
-			$(window).bind('resize.meSlide', function(event) {
+			$(window).bind('resize.jUnislide', function(event) {
 
 				ins._elasticMath();
 
@@ -160,7 +160,7 @@
 				this.pager.append(item);
 
 			}
-			this.pager.children('li').bind('click.meSlide', function() {
+			this.pager.children('li').bind('click.jUnislide', function() {
 
 				value = $(this).attr('index');
 
@@ -205,10 +205,10 @@
 
 			this._toggleNav();
 
-			this.$navLeft.bind('click.meSlide', function() {
+			this.$navLeft.bind('click.jUnislide', function() {
 				ins._slideLeft();
 			});
-			this.$navRight.bind('click.meSlide', function() {
+			this.$navRight.bind('click.jUnislide', function() {
 				ins._slideRight();
 			});
 
@@ -348,7 +348,7 @@
 		}
 	};
 
-	$.fn.meSlide = function(options) {
+	$.fn.jUnislide = function(options) {
 
 		{
 			var settings = $.extend({
