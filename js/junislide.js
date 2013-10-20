@@ -2,7 +2,7 @@
  * http://codendev.com/
  *
  * Copyright 2012 CodenDev 
- * Released under the GPL3 license
+ * Released under the BSD
  *
  */
 (function($) {
